@@ -1,6 +1,6 @@
 // Configuration
-// PLACEHOLDER: Replace this with your actual n8n webhook URL when you have it.
-const N8N_WEBHOOK_URL = "https://n8n.antonasdev.space/webhook/abc/chat";
+// Webhook URL is loaded from config.js
+
 
 // Helper to get elements dynamically
 function getChatElements() {

@@ -29,18 +29,23 @@ git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
 git push -u origin main
 ```
 
-## 4. Enable GitHub Pages
+## 4. Configure Secrets
+1. Go to your repository **Settings** tab.
+2. Click **Secrets and variables** > **Actions** in the left sidebar.
+3. Click **New repository secret**.
+4. Name: `WEBHOOK_URL`
+5. Value: Your actual n8n webhook URL (e.g., `https://n8n.antonasdev.space/webhook/abc/chat`).
+6. Click **Add secret**.
+
+## 5. Enable GitHub Pages
 1. Go to your repository **Settings** tab.
 2. Click **Pages** in the left sidebar.
-3. Under **Build and deployment** > **Source**, select **Deploy from a branch**.
-4. Under **Branch**, select **main** and folder **/(root)**.
-5. Click **Save**.
+3. Under **Build and deployment** > **Source**, select **GitHub Actions** (Beta) or ensure it's set to deploy from the workflow we created.
+   *Note: Since we added a workflow file, GitHub might automatically detect it. If not, select "GitHub Actions".*
 
-## 5. Verify Deployment
-- Wait a minute or two.
-- Refresh the Pages settings page.
-- You will see a link at the top: "Your site is live at..."
-- Click it to verify your site is working!
+## 6. Verify Deployment
+- Go to the **Actions** tab to see your deployment running.
+- Once green, click the deploy job to find your site URL.
 
 > [!IMPORTANT]
 > **n8n Webhook CORS**: If your chat widget connects to n8n, ensure your n8n webhook node is configured to allow requests from your new GitHub Pages domain (e.g., `https://your-username.github.io`).
