@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Moving - Services</title>
+    <meta name="description"
+        content="Explore our professional moving services: Local Moving, Long Distance, Packing, and Worldwide Shipping.">
+    <meta property="og:title" content="ABC Moving - Services">
+    <meta property="og:description"
+        content="Explore our professional moving services: Local Moving, Long Distance, Packing, and Worldwide Shipping.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">ABC Moving</div>
+        <button class="hamburger-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 40vh;">
+        <div>
+            <h1>Our Services</h1>
+            <p>Professional Moving Solutions for Every Need</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Local Moving Plans</h2>
+        <div class="services-grid">
+            <div class="service-card plan-card">
+                <h3>Basic Move</h3>
+                <p>Perfect for small apartments.</p>
+                <ul>
+                    <li>Truck Included</li>
+                    <li>2 Professional Movers</li>
+                    <li>Loading & Unloading</li>
+                </ul>
+                <div class="price">From $300</div>
+            </div>
+            <div class="service-card plan-card">
+                <h3>Full Service</h3>
+                <p>Sit back and relax.</p>
+                <ul>
+                    <li>Truck Included</li>
+                    <li>3 Professional Movers</li>
+                    <li>Packing Service Included</li>
+                    <li>Packing Materials</li>
+                </ul>
+                <div class="price">From $600</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" style="background-color: #fafafa;">
+        <h2>Worldwide Shipping</h2>
+        <div class="services-grid">
+            <div class="service-card plan-card">
+                <h3>Standard Ocean</h3>
+                <p>Cost-effective international shipping.</p>
+                <ul>
+                    <li>Port-to-Port Service</li>
+                    <li>Customs Clearance Assistance</li>
+                    <li>Tracking Included</li>
+                </ul>
+                <div class="price">From $1,500</div>
+            </div>
+            <div class="service-card plan-card">
+                <h3>Express Air</h3>
+                <p>Fastest delivery for urgent moves.</p>
+                <ul>
+                    <li>Door-to-Door Service</li>
+                    <li>Expedited Customs</li>
+                    <li>Priority Handling</li>
+                </ul>
+                <div class="price">From $3,000</div>
+            </div>
+            <div class="service-card plan-card">
+                <h3>Premium Relocation</h3>
+                <p>All-inclusive white glove service.</p>
+                <ul>
+                    <li>Door-to-Door Service</li>
+                    <li>Full Packing & Unpacking</li>
+                    <li>Insurance Included</li>
+                    <li>Personal Move Coordinator</li>
+                </ul>
+                <div class="price">From $5,000</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 ABC Moving. All rights reserved.</p>
+    </footer>
+
+    <div id="chat-bubble-btn" onclick="toggleChat()">
+        <svg viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+        </svg>
+    </div>
+
+    <div id="chat-window">
+        <div class="chat-header">
+            <span>Chat with us</span>
+            <button class="close-btn" onclick="confirmCloseChat()">&times;</button>
+        </div>
+
+        <div id="chat-history">
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+
+            <!-- File Input (Hidden) -->
+            <input type="file" id="file-input" accept="image/*" style="display: none;" onchange="handleFileSelect()">
+
+            <div class="chat-controls">
+                <!-- Paperclip Icon -->
+                <button class="file-upload-btn" onclick="document.getElementById('file-input').click()"
+                    title="Attach Photo">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5a2.5 2.5 0 0 1 5 0v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5a2.5 2.5 0 0 0 5 0V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z" />
+                    </svg>
+                </button>
+
+                <button id="send-btn" onclick="sendMessage()">Send</button>
+                <button id="close-btn-bottom" onclick="minimizeChat()">Minimize</button>
+            </div>
+        </div>
+
+        <!-- Confirmation Popup -->
+        <div id="confirmation-popup" class="confirmation-popup">
+            <p>Warning: Chat history will be deleted. Do you want to proceed?</p>
+            <div class="popup-buttons">
+                <button class="popup-btn btn-tick" onclick="endChatSession()">&#10004;</button>
+                <button class="popup-btn btn-cross" onclick="cancelCloseChat()">&#10006;</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookie-popup" class="cookie-popup">
+        <p>This site uses session cookies to enhance your experience.</p>
+        <button id="cookie-ok-btn" onclick="acceptCookies()">OK</button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+
+</body>
+
+</html>
