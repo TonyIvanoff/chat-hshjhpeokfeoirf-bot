@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { cn } from "@/lib/utils";
 import { EditorSidebar } from "./Editor/EditorSidebar";
 import { FileUpload } from "./FileUpload";
@@ -15,7 +15,7 @@ const PDFViewer = dynamic(() => import("./PDFViewer").then(mod => mod.PDFViewer)
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { LayerCanvas } from "./Editor/LayerCanvas";
-import { Loader2, Wand2, ChevronLeft, ChevronRight, Save, ZoomIn, ZoomOut, RotateCw } from "lucide-react";
+import { Loader2, Wand2, ChevronLeft, ChevronRight, Save, ZoomIn, ZoomOut, RotateCw, Undo2, Redo2 } from "lucide-react";
 
 const PageReorderModal = dynamic(() => import("./PageReorderModal").then(mod => mod.PageReorderModal), {
     ssr: false
@@ -36,27 +36,134 @@ export function PDFEditor() {
     const [selectedLayerId, setSelectedLayerId] = useState<string | null>(null);
     const rightPanelRef = useRef<HTMLDivElement>(null);
 
+    // Per-page undo/redo history (max 50 states per page)
+    const MAX_HISTORY = 50;
+    const [pageHistories, setPageHistories] = useState<Record<number, { past: any[][]; future: any[][] }>>({});
+
     const handleUpload = (url: string, name?: string) => {
         setPdfUrl(url);
         setFilename(name || null);
         // Reset state on new upload
         setEditPage(1);
         setAnalyzedPages({});
+        setPageHistories({});
         setRightZoom(1.0);
         setRotation(0);
         setSelectedLayerId(null);
     };
 
-    // Style Handlers
-    const handleLayersUpdate = (updatedLayers: any[]) => {
-        setAnalyzedPages((prev: Record<number, any>) => ({
+    // Layer update with history tracking
+    const handleLayersUpdate = useCallback((updatedLayers: any[]) => {
+        setAnalyzedPages((prev: Record<number, any>) => {
+            const currentLayers = prev[editPage]?.layers || [];
+
+            // Only track if layers actually changed
+            if (JSON.stringify(currentLayers) !== JSON.stringify(updatedLayers)) {
+                setPageHistories(ph => {
+                    const pageHistory = ph[editPage] || { past: [], future: [] };
+                    return {
+                        ...ph,
+                        [editPage]: {
+                            past: [...pageHistory.past, currentLayers].slice(-MAX_HISTORY),
+                            future: [] // Clear future on new action
+                        }
+                    };
+                });
+            }
+
+            return {
+                ...prev,
+                [editPage]: {
+                    ...prev[editPage],
+                    layers: updatedLayers
+                }
+            };
+        });
+    }, [editPage]);
+
+    // Undo action
+    const handleUndo = useCallback(() => {
+        const pageHistory = pageHistories[editPage];
+        if (!pageHistory || pageHistory.past.length === 0) return;
+
+        const newPast = [...pageHistory.past];
+        const previousLayers = newPast.pop()!;
+        const currentLayers = analyzedPages[editPage]?.layers || [];
+
+        setPageHistories(ph => ({
+            ...ph,
+            [editPage]: {
+                past: newPast,
+                future: [currentLayers, ...(ph[editPage]?.future || [])].slice(0, MAX_HISTORY)
+            }
+        }));
+
+        setAnalyzedPages(prev => ({
             ...prev,
             [editPage]: {
                 ...prev[editPage],
-                layers: updatedLayers
+                layers: previousLayers
             }
         }));
-    };
+    }, [editPage, pageHistories, analyzedPages]);
+
+    // Redo action
+    const handleRedo = useCallback(() => {
+        const pageHistory = pageHistories[editPage];
+        if (!pageHistory || pageHistory.future.length === 0) return;
+
+        const newFuture = [...pageHistory.future];
+        const nextLayers = newFuture.shift()!;
+        const currentLayers = analyzedPages[editPage]?.layers || [];
+
+        setPageHistories(ph => ({
+            ...ph,
+            [editPage]: {
+                past: [...(ph[editPage]?.past || []), currentLayers].slice(-MAX_HISTORY),
+                future: newFuture
+            }
+        }));
+
+        setAnalyzedPages(prev => ({
+            ...prev,
+            [editPage]: {
+                ...prev[editPage],
+                layers: nextLayers
+            }
+        }));
+    }, [editPage, pageHistories, analyzedPages]);
+
+    // Check if undo/redo is available for current page
+    const canUndo = (pageHistories[editPage]?.past?.length || 0) > 0;
+    const canRedo = (pageHistories[editPage]?.future?.length || 0) > 0;
+
+    // Keyboard shortcuts for Undo/Redo
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            // Check if we're in an editable context (input, textarea, contenteditable)
+            const target = e.target as HTMLElement;
+            const isEditable = target.tagName === 'INPUT' ||
+                target.tagName === 'TEXTAREA' ||
+                target.isContentEditable;
+
+            // Only handle if not in an editable element and page is analyzed
+            if (!isEditable && analyzedPages[editPage]) {
+                // Ctrl/Cmd + Shift + Z = Redo
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'z') {
+                    e.preventDefault();
+                    handleRedo();
+                }
+                // Ctrl/Cmd + Z = Undo
+                else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z') {
+                    e.preventDefault();
+                    handleUndo();
+                }
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [editPage, analyzedPages, handleUndo, handleRedo]);
 
     const selectedLayer = analyzedPages[editPage]?.layers?.find((l: any) => l.id === selectedLayerId) || null;
 
@@ -397,6 +504,28 @@ export function PDFEditor() {
 
                             <button onClick={() => setRotation(r => (r + 90) % 360)} className="p-1.5 hover:bg-white/20 rounded-full ml-1 transition-colors" title="Rotate"><RotateCw className="w-4 h-4" /></button>
                         </div>
+
+                        {/* Undo/Redo */}
+                        {analyzedPages[editPage] && (
+                            <div className="flex items-center gap-1 border-r border-white/20 pr-4">
+                                <button
+                                    onClick={handleUndo}
+                                    disabled={!canUndo}
+                                    className="p-1.5 hover:bg-white/20 rounded-full transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                                    title={`Undo (${pageHistories[editPage]?.past?.length || 0} steps)`}
+                                >
+                                    <Undo2 className="w-4 h-4" />
+                                </button>
+                                <button
+                                    onClick={handleRedo}
+                                    disabled={!canRedo}
+                                    className="p-1.5 hover:bg-white/20 rounded-full transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+                                    title={`Redo (${pageHistories[editPage]?.future?.length || 0} steps)`}
+                                >
+                                    <Redo2 className="w-4 h-4" />
+                                </button>
+                            </div>
+                        )}
 
                         {/* Actions */}
                         <div className="flex items-center gap-2">
