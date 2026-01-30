@@ -1,0 +1,36 @@
+﻿INSTALLATION INSTRUCTIONS FOR FONTS
+------------------------------------------------
+
+To Install Fonts On A Mac:
+Open a font by double clicking your mouse on it. This will open the font in a preview window. Select the "Install Font" button to install the font on your Mac, making it available in all applications that support fonts. If your font does not show up right away, you may need to restart your Mac. 
+
+
+You can also install all fonts at once (not recommended with a large number of fonts):
+
+Open Font Book from Applications. At the bottom left of the Font Book application window, click the plus button to "Create a new collection" and rename it to Free Fonts. You should be able to drag and drop all fonts into this new collection. Font Book should automatically install and activate the fonts as it adds them to the new collection so you should now be able to see the fonts in any application that supports fonts. If you are not seeing the new fonts in other applications, try rebooting your Mac.
+
+If you are noticing your Mac is slower, you can right mouse click (or control + mouse click) to Disable "Free Fonts", which will disable all fonts in the collection (so you cannot use them in your applications, but this would fix the slowness you might be experiencing). You can then go through and "Enable" individual fonts in the collection that you want to use, leaving the ones you don't need disabled.
+
+------------------------------------------------
+
+
+To Install Fonts On A PC:
+You can use font management software to preview, install and uninstall your fonts. A great free font installer and previewer can be found here:
+
+http://www.ampsoft.net/utilities/FontViewer.php
+
+You can also preview a font without software by double clicking your mouse on it to open a preview window. To install a font, or multiple fonts, simply select one or more fonts then right  mouse click to open a right click menu. Choose "Install" to install the font(s) into your Windows Fonts folder, making it available to use in all applications that support fonts. If your font does not show up right away, you may need to restart your PC, or close and reopen any applications you are trying to use the fonts with.
+
+You can also install groups of fonts by selecting multiple fonts, right click on a selected font, and then choose the Install option from the right click menu.
+
+------------------------------------------------
+
+IMPORTANT: We recommend only installing the fonts you plan on using. Installing a large number of fonts at once can slow down your computer.
+
+Let us know if you are experiencing any problems. Contact us at:
+
+
+
+MacAppware
+www.macappware.com
+

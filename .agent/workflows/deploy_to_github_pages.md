@@ -31,11 +31,14 @@ git push -u origin main
 
 ## 4. Configure Secrets
 1. Go to your repository **Settings** tab.
-2. Click **Secrets and variables** > **Actions** in the left sidebar.
-3. Click **New repository secret**.
-4. Name: `WEBHOOK_URL`
-5. Value: Your actual n8n webhook URL (e.g., `https://n8n.antonasdev.space/webhook/abc/chat`).
-6. Click **Add secret**.
+2. Scroll down the left sidebar to the **Security** section.
+3. Click **Secrets and variables** to expand the menu.
+4. Click **Actions** (inside the Secrets and variables menu).
+   *(Note: Do not click the top-level "Actions" menu under "Code and automation".)*
+5. Click **New repository secret**.
+6. Name: `WEBHOOK_URL`
+7. Value: Your actual n8n webhook URL (e.g., `https://n8n.antonasdev.space/webhook/abc/chat`).
+8. Click **Add secret**.
 
 ## 5. Enable GitHub Pages
 1. Go to your repository **Settings** tab.

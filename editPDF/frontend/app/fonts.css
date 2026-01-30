@@ -1,0 +1,3390 @@
+
+@font-face {
+  font-family: '11S0BlackTuesday';
+  src: url('/fonts/11S0BlackTuesday.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AbjectFailure';
+  src: url('/fonts/AbjectFailure.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AdineKirnberg-Alternate';
+  src: url('/fonts/AdineKirnberg-Alternate.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AdineKirnberg';
+  src: url('/fonts/AdineKirnberg.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AerojonesNF';
+  src: url('/fonts/AerojonesNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AirstreamNF';
+  src: url('/fonts/AirstreamNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alpenstube';
+  src: url('/fonts/Alpenstube.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alpine';
+  src: url('/fonts/Alpine.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AlteCaps';
+  src: url('/fonts/AlteCaps.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ambrosia';
+  src: url('/fonts/Ambrosia.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AmericanText';
+  src: url('/fonts/AmericanText.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AmsterdamTangram';
+  src: url('/fonts/AmsterdamTangram.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AnagramNF';
+  src: url('/fonts/AnagramNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aneirin';
+  src: url('/fonts/Aneirin.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Angelou';
+  src: url('/fonts/Angelou.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AnglicanText';
+  src: url('/fonts/AnglicanText.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arabella';
+  src: url('/fonts/Arabella.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ArbuckleFat';
+  src: url('/fonts/ArbuckleFat.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ArgosGeorge';
+  src: url('/fonts/ArgosGeorge.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ArgosGeorgeContour';
+  src: url('/fonts/ArgosGeorgeContour.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AtlantisFound';
+  src: url('/fonts/AtlantisFound.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Azteka';
+  src: url('/fonts/Azteka.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BackstagePassNF';
+  src: url('/fonts/BackstagePassNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BalaCynwydNF';
+  src: url('/fonts/BalaCynwydNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BatteredCooper';
+  src: url('/fonts/BatteredCooper.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Becker-Inline';
+  src: url('/fonts/Becker-Inline.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Becker';
+  src: url('/fonts/Becker.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BeckerShadow';
+  src: url('/fonts/BeckerShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BellhopNF';
+  src: url('/fonts/BellhopNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Belshaw';
+  src: url('/fonts/Belshaw.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BenjaminFranklin';
+  src: url('/fonts/BenjaminFranklin.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BeteNoirNF';
+  src: url('/fonts/BeteNoirNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BigBook-Heavy';
+  src: url('/fonts/BigBook-Heavy.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Billboard-College';
+  src: url('/fonts/Billboard-College.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Billboard-Shadow';
+  src: url('/fonts/Billboard-Shadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BittersweetNF';
+  src: url('/fonts/BittersweetNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blackletter';
+  src: url('/fonts/Blackletter.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BlackletterShadow';
+  src: url('/fonts/BlackletterShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BlackwoodCastle';
+  src: url('/fonts/BlackwoodCastle.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BlackwoodCastleShadow';
+  src: url('/fonts/BlackwoodCastleShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BlobfontG98';
+  src: url('/fonts/BlobfontG98.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BlockedArtistry';
+  src: url('/fonts/BlockedArtistry.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blockstepped';
+  src: url('/fonts/Blockstepped.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BlownAway';
+  src: url('/fonts/BlownAway.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brazilia';
+  src: url('/fonts/Brazilia.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BreakingNews';
+  src: url('/fonts/BreakingNews.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BrianJames-Contour';
+  src: url('/fonts/BrianJames-Contour.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BrianJames';
+  src: url('/fonts/BrianJames.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BrockScript';
+  src: url('/fonts/BrockScript.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cabaret';
+  src: url('/fonts/Cabaret.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CabaretContour';
+  src: url('/fonts/CabaretContour.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CabaretShadow';
+  src: url('/fonts/CabaretShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CalamityJaneNF';
+  src: url('/fonts/CalamityJaneNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Campfire';
+  src: url('/fonts/Campfire.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cantebriggia';
+  src: url('/fonts/Cantebriggia.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canterbury';
+  src: url('/fonts/Canterbury.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cardiff';
+  src: url('/fonts/Cardiff.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CaslonAntique';
+  src: url('/fonts/CaslonAntique.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CaslonCalligraphicInitials';
+  src: url('/fonts/CaslonCalligraphicInitials.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cavalier';
+  src: url('/fonts/Cavalier.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CelticHand';
+  src: url('/fonts/CelticHand.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChanticleerRomanNF';
+  src: url('/fonts/ChanticleerRomanNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chelsea';
+  src: url('/fonts/Chelsea.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChelseaAlternates';
+  src: url('/fonts/ChelseaAlternates.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chi-TownNF';
+  src: url('/fonts/Chi-TownNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChickenScript';
+  src: url('/fonts/ChickenScript.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChipperfieldAndBailey';
+  src: url('/fonts/ChipperfieldAndBailey.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChippewaFallsNF';
+  src: url('/fonts/ChippewaFallsNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChockABlockNF';
+  src: url('/fonts/ChockABlockNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChocolateBoxDecorative';
+  src: url('/fonts/ChocolateBoxDecorative.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ChocolateDropsNF';
+  src: url('/fonts/ChocolateDropsNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CircuitBoredNF';
+  src: url('/fonts/CircuitBoredNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CircusOrnate';
+  src: url('/fonts/CircusOrnate.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Claritty';
+  src: url('/fonts/Claritty.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cleaver's_Juvenia';
+  src: url('/fonts/Cleaver's_Juvenia.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cleaver's_Juvenia_Blocked';
+  src: url('/fonts/Cleaver's_Juvenia_Blocked.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Clerica-Medium';
+  src: url('/fonts/Clerica-Medium.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coaster';
+  src: url('/fonts/Coaster.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CoasterPoster';
+  src: url('/fonts/CoasterPoster.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ColtaineNo2';
+  src: url('/fonts/ColtaineNo2.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ComicXT';
+  src: url('/fonts/ComicXT.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CongaLineNF';
+  src: url('/fonts/CongaLineNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CopaseticNF';
+  src: url('/fonts/CopaseticNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CopperCanyonWBW';
+  src: url('/fonts/CopperCanyonWBW.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CoventryGarden';
+  src: url('/fonts/CoventryGarden.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CoventryGardenNF';
+  src: url('/fonts/CoventryGardenNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Creampuff';
+  src: url('/fonts/Creampuff.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CuppaJoe';
+  src: url('/fonts/CuppaJoe.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Czaristite';
+  src: url('/fonts/Czaristite.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DSAdmiral';
+  src: url('/fonts/DSAdmiral.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DSChocolade';
+  src: url('/fonts/DSChocolade.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DSFattyContour';
+  src: url('/fonts/DSFattyContour.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DSFattyShadow';
+  src: url('/fonts/DSFattyShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DSFetteGotisch';
+  src: url('/fonts/DSFetteGotisch.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DSFetteKanzlei';
+  src: url('/fonts/DSFetteKanzlei.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DSHansen';
+  src: url('/fonts/DSHansen.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DSHolzschrift';
+  src: url('/fonts/DSHolzschrift.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DaddyLonglegsNF';
+  src: url('/fonts/DaddyLonglegsNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DampfplatzDemiBold';
+  src: url('/fonts/DampfplatzDemiBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DampfplatzShadowBlack';
+  src: url('/fonts/DampfplatzShadowBlack.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DampfplatzSolidBlack';
+  src: url('/fonts/DampfplatzSolidBlack.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DancingDonutsNF';
+  src: url('/fonts/DancingDonutsNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DayPosterBlackNF';
+  src: url('/fonts/DayPosterBlackNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DeStencilNF';
+  src: url('/fonts/DeStencilNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DeepWoodsInitials';
+  src: url('/fonts/DeepWoodsInitials.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DevinneSwash';
+  src: url('/fonts/DevinneSwash.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DevinneSwashShadow';
+  src: url('/fonts/DevinneSwashShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DiMurphic';
+  src: url('/fonts/DiMurphic.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Digitrax';
+  src: url('/fonts/Digitrax.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DingDongDaddyoNF';
+  src: url('/fonts/DingDongDaddyoNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Direction';
+  src: url('/fonts/Direction.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DistressedOut';
+  src: url('/fonts/DistressedOut.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DobkinScript';
+  src: url('/fonts/DobkinScript.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Domino-Regular';
+  src: url('/fonts/Domino-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Domino-Shadow';
+  src: url('/fonts/Domino-Shadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DosEquisNF';
+  src: url('/fonts/DosEquisNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dover-Heavy';
+  src: url('/fonts/Dover-Heavy.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DoverContour';
+  src: url('/fonts/DoverContour.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DoverHeights-Bold';
+  src: url('/fonts/DoverHeights-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DoverHeights';
+  src: url('/fonts/DoverHeights.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DoverShadow';
+  src: url('/fonts/DoverShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Draughtsman';
+  src: url('/fonts/Draughtsman.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DraughtsmanBold';
+  src: url('/fonts/DraughtsmanBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DriftWood';
+  src: url('/fonts/DriftWood.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Drive-ThruNF';
+  src: url('/fonts/Drive-ThruNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DrumagStudioNF';
+  src: url('/fonts/DrumagStudioNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DubbaDubbaNF';
+  src: url('/fonts/DubbaDubbaNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DueDate';
+  src: url('/fonts/DueDate.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dundalk';
+  src: url('/fonts/Dundalk.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DundalkEmbossed';
+  src: url('/fonts/DundalkEmbossed.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DundalkHandDrawn';
+  src: url('/fonts/DundalkHandDrawn.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Durwent';
+  src: url('/fonts/Durwent.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DustyRoseNF';
+  src: url('/fonts/DustyRoseNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DutchInitialsNormal';
+  src: url('/fonts/DutchInitialsNormal.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Duvall';
+  src: url('/fonts/Duvall.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuvallBold';
+  src: url('/fonts/DuvallBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuvallCondensed';
+  src: url('/fonts/DuvallCondensed.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuvallCondensedBold';
+  src: url('/fonts/DuvallCondensedBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuvallOutline';
+  src: url('/fonts/DuvallOutline.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuvallSmallCaps';
+  src: url('/fonts/DuvallSmallCaps.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuvallSmallCapsBold';
+  src: url('/fonts/DuvallSmallCapsBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuvallSmallCapsCondensed';
+  src: url('/fonts/DuvallSmallCapsCondensed.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuvallSmallCapsCondensedBold';
+  src: url('/fonts/DuvallSmallCapsCondensedBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DuvallSmallCapsOutline';
+  src: url('/fonts/DuvallSmallCapsOutline.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DymaxionScript';
+  src: url('/fonts/DymaxionScript.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EgyptienneZierversalien';
+  src: url('/fonts/EgyptienneZierversalien.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ElegantCapitals';
+  src: url('/fonts/ElegantCapitals.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ElegantCapitalsII';
+  src: url('/fonts/ElegantCapitalsII.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ElgethyUpper';
+  src: url('/fonts/ElgethyUpper.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EmbossedBlackNormal';
+  src: url('/fonts/EmbossedBlackNormal.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EmbossedBlackWide';
+  src: url('/fonts/EmbossedBlackWide.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EmbossedGermanica';
+  src: url('/fonts/EmbossedGermanica.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EmporiumCapitals';
+  src: url('/fonts/EmporiumCapitals.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EngeHolzschrift-Shadow';
+  src: url('/fonts/EngeHolzschrift-Shadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EngeHolzschrift';
+  src: url('/fonts/EngeHolzschrift.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EnglishTowne';
+  src: url('/fonts/EnglishTowne.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'EngravierInitials';
+  src: url('/fonts/EngravierInitials.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Epoque';
+  src: url('/fonts/Epoque.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Erasmus';
+  src: url('/fonts/Erasmus.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ErasmusBold';
+  src: url('/fonts/ErasmusBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ErasmusInline';
+  src: url('/fonts/ErasmusInline.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ErasmusInlineBold';
+  src: url('/fonts/ErasmusInlineBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ErbarInitialen-Regular';
+  src: url('/fonts/ErbarInitialen-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ErbarInitialen-Shadow';
+  src: url('/fonts/ErbarInitialen-Shadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Eredel';
+  src: url('/fonts/Eredel.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ericott';
+  src: url('/fonts/Ericott.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Estelle';
+  src: url('/fonts/Estelle.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Express';
+  src: url('/fonts/Express.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FacetsNF_New';
+  src: url('/fonts/FacetsNF_New.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Faktos';
+  src: url('/fonts/Faktos.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FancyPantsNF';
+  src: url('/fonts/FancyPantsNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Faranvale';
+  src: url('/fonts/Faranvale.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FargoFaroNF';
+  src: url('/fonts/FargoFaroNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FashionVictim';
+  src: url('/fonts/FashionVictim.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Festival';
+  src: url('/fonts/Festival.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FestivalBold';
+  src: url('/fonts/FestivalBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FestivalFlourish';
+  src: url('/fonts/FestivalFlourish.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FestivalFlourishBold';
+  src: url('/fonts/FestivalFlourishBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FeteAccompliNF';
+  src: url('/fonts/FeteAccompliNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FetteEgyptienne';
+  src: url('/fonts/FetteEgyptienne.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FetteSteinschrift';
+  src: url('/fonts/FetteSteinschrift.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FilmCryptic';
+  src: url('/fonts/FilmCryptic.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FlaemischeKanzleischrift';
+  src: url('/fonts/FlaemischeKanzleischrift.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FloranaInitials';
+  src: url('/fonts/FloranaInitials.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FlutedGermanica';
+  src: url('/fonts/FlutedGermanica.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FoliarInitials';
+  src: url('/fonts/FoliarInitials.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Forelle';
+  src: url('/fonts/Forelle.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Frangelica';
+  src: url('/fonts/Frangelica.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Freame-Plain';
+  src: url('/fonts/Freame-Plain.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FrederickText';
+  src: url('/fonts/FrederickText.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Full-TiltBoogieNF';
+  src: url('/fonts/Full-TiltBoogieNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FunkyRundkopfNF';
+  src: url('/fonts/FunkyRundkopfNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gabrielle';
+  src: url('/fonts/Gabrielle.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GanzGrobeGotisch';
+  src: url('/fonts/GanzGrobeGotisch.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garavol';
+  src: url('/fonts/Garavol.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garidelli';
+  src: url('/fonts/Garidelli.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GenzschEtHeyse';
+  src: url('/fonts/GenzschEtHeyse.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GenzschEtHeyseAlt';
+  src: url('/fonts/GenzschEtHeyseAlt.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Germania';
+  src: url('/fonts/Germania.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GermaniaShadow';
+  src: url('/fonts/GermaniaShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GingerPeachyNF';
+  src: url('/fonts/GingerPeachyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glastonbury';
+  src: url('/fonts/Glastonbury.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GlastonburyShadow';
+  src: url('/fonts/GlastonburyShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GlastonburyWide';
+  src: url('/fonts/GlastonburyWide.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GlastonburyWideShadow';
+  src: url('/fonts/GlastonburyWideShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Globus-Shadow';
+  src: url('/fonts/Globus-Shadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Globus';
+  src: url('/fonts/Globus.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gorilla';
+  src: url('/fonts/Gorilla.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GoudyTwenty';
+  src: url('/fonts/GoudyTwenty.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GradoGradooNF';
+  src: url('/fonts/GradoGradooNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GramophoneNF';
+  src: url('/fonts/GramophoneNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GramophoneShadedNF';
+  src: url('/fonts/GramophoneShadedNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GranthamBold';
+  src: url('/fonts/GranthamBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GranthamCondensedBold';
+  src: url('/fonts/GranthamCondensedBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GranthamCondensedRoman';
+  src: url('/fonts/GranthamCondensedRoman.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GranthamLight';
+  src: url('/fonts/GranthamLight.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GranthamLightCondensed';
+  src: url('/fonts/GranthamLightCondensed.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GranthamOutline';
+  src: url('/fonts/GranthamOutline.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GranthamRoman';
+  src: url('/fonts/GranthamRoman.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GranthamShadow';
+  src: url('/fonts/GranthamShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphis-Oblique';
+  src: url('/fonts/Graphis-Oblique.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphis';
+  src: url('/fonts/Graphis.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Grasshopper';
+  src: url('/fonts/Grasshopper.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GreatLakesShadowNF';
+  src: url('/fonts/GreatLakesShadowNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GrenadierNF';
+  src: url('/fonts/GrenadierNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Grimeswade';
+  src: url('/fonts/Grimeswade.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Grinder';
+  src: url('/fonts/Grinder.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GrungeFace';
+  src: url('/fonts/GrungeFace.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GuinnessExtraStoutNF';
+  src: url('/fonts/GuinnessExtraStoutNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GulfstreamNF';
+  src: url('/fonts/GulfstreamNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hackles';
+  src: url('/fonts/Hackles.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Halftone';
+  src: url('/fonts/Halftone.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HamburgerHeavenNF';
+  src: url('/fonts/HamburgerHeavenNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Handskrib';
+  src: url('/fonts/Handskrib.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hansa';
+  src: url('/fonts/Hansa.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeavyTrippNF';
+  src: url('/fonts/HeavyTrippNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helena';
+  src: url('/fonts/Helena.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelenaBold';
+  src: url('/fonts/HelenaBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelenaOutline';
+  src: url('/fonts/HelenaOutline.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelenaSquat';
+  src: url('/fonts/HelenaSquat.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelenaWide';
+  src: url('/fonts/HelenaWide.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hemmerhaus';
+  src: url('/fonts/Hemmerhaus.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HenryMorganHand';
+  src: url('/fonts/HenryMorganHand.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HentzauInitials';
+  src: url('/fonts/HentzauInitials.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeraldSquareNF';
+  src: url('/fonts/HeraldSquareNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HeraldSquareTwoNF';
+  src: url('/fonts/HeraldSquareTwoNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hercules';
+  src: url('/fonts/Hercules.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Herkules';
+  src: url('/fonts/Herkules.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Herold';
+  src: url('/fonts/Herold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HighFiveJiveNF';
+  src: url('/fonts/HighFiveJiveNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HighFiveNF';
+  src: url('/fonts/HighFiveNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HobbyHorseNF';
+  src: url('/fonts/HobbyHorseNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hoedown-Shadow';
+  src: url('/fonts/Hoedown-Shadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hoedown';
+  src: url('/fonts/Hoedown.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HollaScript';
+  src: url('/fonts/HollaScript.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HolyRavioliNF';
+  src: url('/fonts/HolyRavioliNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Hominis';
+  src: url('/fonts/Hominis.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Honduro';
+  src: url('/fonts/Honduro.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HoneyScript-Light';
+  src: url('/fonts/HoneyScript-Light.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HoneyScript-SemiBold';
+  src: url('/fonts/HoneyScript-SemiBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HornswoggledNF';
+  src: url('/fonts/HornswoggledNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Iglesia';
+  src: url('/fonts/Iglesia.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Imperator';
+  src: url('/fonts/Imperator.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ImperatorBold';
+  src: url('/fonts/ImperatorBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ImperatorBronze';
+  src: url('/fonts/ImperatorBronze.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ImperatorBronzeSmallCaps';
+  src: url('/fonts/ImperatorBronzeSmallCaps.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ImperatorPlaque';
+  src: url('/fonts/ImperatorPlaque.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ImperatorSmallCaps';
+  src: url('/fonts/ImperatorSmallCaps.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ImperatorSmallCapsBold';
+  src: url('/fonts/ImperatorSmallCapsBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IncisedBlack';
+  src: url('/fonts/IncisedBlack.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IncisedBlackWide';
+  src: url('/fonts/IncisedBlackWide.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IndochineNF';
+  src: url('/fonts/IndochineNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IndubitablyNF';
+  src: url('/fonts/IndubitablyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Infula';
+  src: url('/fonts/Infula.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IronickNF';
+  src: url('/fonts/IronickNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jacobi';
+  src: url('/fonts/Jacobi.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JacobiStriped';
+  src: url('/fonts/JacobiStriped.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JaggaPoint';
+  src: url('/fonts/JaggaPoint.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JanBrady';
+  src: url('/fonts/JanBrady.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jeepers';
+  src: url('/fonts/Jeepers.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JoostAMillionaireNF';
+  src: url('/fonts/JoostAMillionaireNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JuneBugStompNF';
+  src: url('/fonts/JuneBugStompNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JungleFeverInlineNF';
+  src: url('/fonts/JungleFeverInlineNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JungleFeverNF';
+  src: url('/fonts/JungleFeverNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KalenderblattGrotesk';
+  src: url('/fonts/KalenderblattGrotesk.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karnevale';
+  src: url('/fonts/Karnevale.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kashmir';
+  src: url('/fonts/Kashmir.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kefario';
+  src: url('/fonts/Kefario.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KelmscottRomanNF-Bold';
+  src: url('/fonts/KelmscottRomanNF-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KelmscottRomanNF';
+  src: url('/fonts/KelmscottRomanNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KerfuffleNF';
+  src: url('/fonts/KerfuffleNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KickAssinger';
+  src: url('/fonts/KickAssinger.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kildor';
+  src: url('/fonts/Kildor.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Killigrew';
+  src: url('/fonts/Killigrew.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KilligrewStacatto';
+  src: url('/fonts/KilligrewStacatto.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kindertype-SemiBold';
+  src: url('/fonts/Kindertype-SemiBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KingsCross';
+  src: url('/fonts/KingsCross.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kirkingham';
+  src: url('/fonts/Kirkingham.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KismetNF';
+  src: url('/fonts/KismetNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KochAntiquaZierbuchstaben';
+  src: url('/fonts/KochAntiquaZierbuchstaben.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Koloss';
+  src: url('/fonts/Koloss.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KolossContour';
+  src: url('/fonts/KolossContour.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'KurvaceousNF';
+  src: url('/fonts/KurvaceousNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LabtopSuperwideBoldish';
+  src: url('/fonts/LabtopSuperwideBoldish.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LabyrinthNF';
+  src: url('/fonts/LabyrinthNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LackawannaWeedNF';
+  src: url('/fonts/LackawannaWeedNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Laconick-NormalA';
+  src: url('/fonts/Laconick-NormalA.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LaffRiotNF';
+  src: url('/fonts/LaffRiotNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LagniappeInlineNF';
+  src: url('/fonts/LagniappeInlineNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LakeWobegonNF';
+  src: url('/fonts/LakeWobegonNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LakeshoreDriveNF';
+  src: url('/fonts/LakeshoreDriveNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Landsdowne';
+  src: url('/fonts/Landsdowne.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LandsdowneShadowed';
+  src: url('/fonts/LandsdowneShadowed.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lanehum';
+  src: url('/fonts/Lanehum.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Laurendra';
+  src: url('/fonts/Laurendra.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Legrand-Regular';
+  src: url('/fonts/Legrand-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lewisham';
+  src: url('/fonts/Lewisham.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LewishamBold';
+  src: url('/fonts/LewishamBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LewishamCondensed';
+  src: url('/fonts/LewishamCondensed.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LewishamDropCaps';
+  src: url('/fonts/LewishamDropCaps.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LewishamShadowII';
+  src: url('/fonts/LewishamShadowII.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LewishamShadowed';
+  src: url('/fonts/LewishamShadowed.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LewishamShadowedWide';
+  src: url('/fonts/LewishamShadowedWide.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LewishamStripe';
+  src: url('/fonts/LewishamStripe.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LewishamWide';
+  src: url('/fonts/LewishamWide.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lightfoot';
+  src: url('/fonts/Lightfoot.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LightfootBold';
+  src: url('/fonts/LightfootBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LightfootFluted';
+  src: url('/fonts/LightfootFluted.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LightfootNarrowExtCond';
+  src: url('/fonts/LightfootNarrowExtCond.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LightfootOutlineExtExp';
+  src: url('/fonts/LightfootOutlineExtExp.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LightfootShadowed';
+  src: url('/fonts/LightfootShadowed.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LightfootWideExp';
+  src: url('/fonts/LightfootWideExp.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lighthaus';
+  src: url('/fonts/Lighthaus.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Linolschrift-Heavy';
+  src: url('/fonts/Linolschrift-Heavy.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Linolschrift';
+  src: url('/fonts/Linolschrift.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lintsec';
+  src: url('/fonts/Lintsec.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LisburneInitials';
+  src: url('/fonts/LisburneInitials.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LittleDeuceCoupeNF';
+  src: url('/fonts/LittleDeuceCoupeNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LittleLordFontleroyNF';
+  src: url('/fonts/LittleLordFontleroyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LittleRickeyNF';
+  src: url('/fonts/LittleRickeyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Logger';
+  src: url('/fonts/Logger.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LongIsland-Shadow';
+  src: url('/fonts/LongIsland-Shadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LongIslandAntiqua';
+  src: url('/fonts/LongIslandAntiqua.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LongIslandContour';
+  src: url('/fonts/LongIslandContour.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LostWages';
+  src: url('/fonts/LostWages.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Louvaine';
+  src: url('/fonts/Louvaine.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'LuncheonetteNF';
+  src: url('/fonts/LuncheonetteNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MadisonSquareNF';
+  src: url('/fonts/MadisonSquareNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MagicLanternNF';
+  src: url('/fonts/MagicLanternNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mangage';
+  src: url('/fonts/Mangage.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MarchMadnessNF';
+  src: url('/fonts/MarchMadnessNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MarkerArt-SemiBold';
+  src: url('/fonts/MarkerArt-SemiBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MarketingScript-Inline';
+  src: url('/fonts/MarketingScript-Inline.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MarketingScript-Shadow';
+  src: url('/fonts/MarketingScript-Shadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MarketingScript';
+  src: url('/fonts/MarketingScript.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MaterhornNF';
+  src: url('/fonts/MaterhornNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MediaevalCaps';
+  src: url('/fonts/MediaevalCaps.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Menuetto';
+  src: url('/fonts/Menuetto.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MerriGables';
+  src: url('/fonts/MerriGables.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MetroRetroNF';
+  src: url('/fonts/MetroRetroNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MetropolisNF';
+  src: url('/fonts/MetropolisNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MiddleEarthNF';
+  src: url('/fonts/MiddleEarthNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MidlandRailNF';
+  src: url('/fonts/MidlandRailNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MidlandRailShadowNF';
+  src: url('/fonts/MidlandRailShadowNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MiltonBurlesqueNF';
+  src: url('/fonts/MiltonBurlesqueNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MinimExtraBold';
+  src: url('/fonts/MinimExtraBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MinstrelPosterNF';
+  src: url('/fonts/MinstrelPosterNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MinstrelPosterTwoNF';
+  src: url('/fonts/MinstrelPosterTwoNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ModernTypographyNF';
+  src: url('/fonts/ModernTypographyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moderna';
+  src: url('/fonts/Moderna.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MondoRedondoNF';
+  src: url('/fonts/MondoRedondoNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonicasSalonNF';
+  src: url('/fonts/MonicasSalonNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonicasSalonShadowNF';
+  src: url('/fonts/MonicasSalonShadowNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonkeyBusinessNF';
+  src: url('/fonts/MonkeyBusinessNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MonkeyFingersNF';
+  src: url('/fonts/MonkeyFingersNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montague';
+  src: url('/fonts/Montague.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MontereyPopsicleNF';
+  src: url('/fonts/MontereyPopsicleNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mordred-Bold';
+  src: url('/fonts/Mordred-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mordred';
+  src: url('/fonts/Mordred.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Morgan';
+  src: url('/fonts/Morgan.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MorganTwentyNine';
+  src: url('/fonts/MorganTwentyNine.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mosaic';
+  src: url('/fonts/Mosaic.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Muchaka';
+  src: url('/fonts/Muchaka.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MunchausenNF';
+  src: url('/fonts/MunchausenNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MyFault';
+  src: url('/fonts/MyFault.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MyGalSwoopyNF';
+  src: url('/fonts/MyGalSwoopyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MyType';
+  src: url('/fonts/MyType.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NamesakeNF';
+  src: url('/fonts/NamesakeNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neptune8-Black';
+  src: url('/fonts/Neptune8-Black.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NewStyle';
+  src: url('/fonts/NewStyle.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Newchester';
+  src: url('/fonts/Newchester.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NickelodeonNF';
+  src: url('/fonts/NickelodeonNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NickerbockerNF';
+  src: url('/fonts/NickerbockerNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NickleyNF';
+  src: url('/fonts/NickleyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nickodemus-Extremus';
+  src: url('/fonts/Nickodemus-Extremus.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NightAtTheOperaNF';
+  src: url('/fonts/NightAtTheOperaNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nightcap';
+  src: url('/fonts/Nightcap.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NipAndTuckNF';
+  src: url('/fonts/NipAndTuckNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noir-et-Blanc';
+  src: url('/fonts/Noir-et-Blanc.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NorthFace';
+  src: url('/fonts/NorthFace.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotMaryKateNF';
+  src: url('/fonts/NotMaryKateNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nubian-Regular';
+  src: url('/fonts/Nubian-Regular.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nubian-Shadow';
+  src: url('/fonts/Nubian-Shadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nuggles';
+  src: url('/fonts/Nuggles.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OldEnglishFive';
+  src: url('/fonts/OldEnglishFive.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OldGateLaneNF';
+  src: url('/fonts/OldGateLaneNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OldLondon';
+  src: url('/fonts/OldLondon.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OldeEnglish';
+  src: url('/fonts/OldeEnglish.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OldgateLaneOutline';
+  src: url('/fonts/OldgateLaneOutline.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OrionRadioNF';
+  src: url('/fonts/OrionRadioNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OrotundHeavy';
+  src: url('/fonts/OrotundHeavy.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OurGangNF';
+  src: url('/fonts/OurGangNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OwahTaguSiamNF';
+  src: url('/fonts/OwahTaguSiamNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PackardAntique';
+  src: url('/fonts/PackardAntique.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PackardClipperNF';
+  src: url('/fonts/PackardClipperNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ParkLaneNF';
+  src: url('/fonts/ParkLaneNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PasticheNF';
+  src: url('/fonts/PasticheNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PayzantPenNF';
+  src: url('/fonts/PayzantPenNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Peake';
+  src: url('/fonts/Peake.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PeakeBold';
+  src: url('/fonts/PeakeBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pecot';
+  src: url('/fonts/Pecot.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Penelope';
+  src: url('/fonts/Penelope.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Penshurst';
+  src: url('/fonts/Penshurst.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PenshurstBold';
+  src: url('/fonts/PenshurstBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Perisphere';
+  src: url('/fonts/Perisphere.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Persippiny';
+  src: url('/fonts/Persippiny.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PhattPhreddyNF';
+  src: url('/fonts/PhattPhreddyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PilsenPlakat';
+  src: url('/fonts/PilsenPlakat.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PinballWhizNF';
+  src: url('/fonts/PinballWhizNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pinewood';
+  src: url('/fonts/Pinewood.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlainGermanica';
+  src: url('/fonts/PlainGermanica.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlakatFraktur';
+  src: url('/fonts/PlakatFraktur.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlatonickNF';
+  src: url('/fonts/PlatonickNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PleasinglyPlumpNF';
+  src: url('/fonts/PleasinglyPlumpNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PlugNickelNF';
+  src: url('/fonts/PlugNickelNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PointsWestNF';
+  src: url('/fonts/PointsWestNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Polo-SemiBold';
+  src: url('/fonts/Polo-SemiBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PonsonbyNF';
+  src: url('/fonts/PonsonbyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PopularCafeNF';
+  src: url('/fonts/PopularCafeNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PortlandRoman';
+  src: url('/fonts/PortlandRoman.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PowellAntique';
+  src: url('/fonts/PowellAntique.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PrinceValiant';
+  src: url('/fonts/PrinceValiant.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Prisma';
+  src: url('/fonts/Prisma.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PublicEnemyNF';
+  src: url('/fonts/PublicEnemyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PyriformTonesNF';
+  src: url('/fonts/PyriformTonesNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QueenEmpress';
+  src: url('/fonts/QueenEmpress.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QuentinCaps';
+  src: url('/fonts/QuentinCaps.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'QuigleyWiggly';
+  src: url('/fonts/QuigleyWiggly.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RaconteurNF';
+  src: url('/fonts/RaconteurNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RadioDaysNF';
+  src: url('/fonts/RadioDaysNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RadioRanchNF';
+  src: url('/fonts/RadioRanchNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RaggMoppNF';
+  src: url('/fonts/RaggMoppNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RaskalnikovNF';
+  src: url('/fonts/RaskalnikovNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RavePartyBold';
+  src: url('/fonts/RavePartyBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RedOctoberNF';
+  src: url('/fonts/RedOctoberNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReliefGrotesk';
+  src: url('/fonts/ReliefGrotesk.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReynoldArtDeco';
+  src: url('/fonts/ReynoldArtDeco.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ReynoldContour';
+  src: url('/fonts/ReynoldContour.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RhubarbPie';
+  src: url('/fonts/RhubarbPie.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RialtoNF';
+  src: url('/fonts/RialtoNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RicksAmericanNF';
+  src: url('/fonts/RicksAmericanNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RiotSquadNF';
+  src: url('/fonts/RiotSquadNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RitzyNormal';
+  src: url('/fonts/RitzyNormal.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RitzyRemixNF';
+  src: url('/fonts/RitzyRemixNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RivannaNF';
+  src: url('/fonts/RivannaNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rockmaker';
+  src: url('/fonts/Rockmaker.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RollerCoaster';
+  src: url('/fonts/RollerCoaster.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RollingNoOne-ExtraBold';
+  src: url('/fonts/RollingNoOne-ExtraBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RomanAntique-Italic';
+  src: url('/fonts/RomanAntique-Italic.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RomanAntique';
+  src: url('/fonts/RomanAntique.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Romantiques';
+  src: url('/fonts/Romantiques.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RunyTunesRevisitedNF';
+  src: url('/fonts/RunyTunesRevisitedNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruritania';
+  src: url('/fonts/Ruritania.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RxScript';
+  src: url('/fonts/RxScript.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saddlebag';
+  src: url('/fonts/Saddlebag.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SanRemo';
+  src: url('/fonts/SanRemo.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SansPlateCaps';
+  src: url('/fonts/SansPlateCaps.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SarsaparillaNF';
+  src: url('/fonts/SarsaparillaNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Schampel';
+  src: url('/fonts/Schampel.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SeasideResortNF';
+  src: url('/fonts/SeasideResortNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SelznickRemixNF';
+  src: url('/fonts/SelznickRemixNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sentinel';
+  src: url('/fonts/Sentinel.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SesquipedalianNF';
+  src: url('/fonts/SesquipedalianNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ShallWeGdanskNF';
+  src: url('/fonts/ShallWeGdanskNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ShinerBlock';
+  src: url('/fonts/ShinerBlock.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ShinzenStroke';
+  src: url('/fonts/ShinzenStroke.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sho-CardCapsNF';
+  src: url('/fonts/Sho-CardCapsNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shrewsbury';
+  src: url('/fonts/Shrewsbury.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SidTheKidNF';
+  src: url('/fonts/SidTheKidNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Simpleman';
+  src: url('/fonts/Simpleman.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SkaterPark-Black';
+  src: url('/fonts/SkaterPark-Black.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SkittlesnBeerNF';
+  src: url('/fonts/SkittlesnBeerNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Slabtag';
+  src: url('/fonts/Slabtag.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SlugfestNF';
+  src: url('/fonts/SlugfestNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SmartFrocksNF';
+  src: url('/fonts/SmartFrocksNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SmorgasbordNF';
+  src: url('/fonts/SmorgasbordNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SnappyServiceNF';
+  src: url('/fonts/SnappyServiceNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SnottBold';
+  src: url('/fonts/SnottBold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SolidOoky';
+  src: url('/fonts/SolidOoky.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SonomaScript';
+  src: url('/fonts/SonomaScript.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SouciSansNF';
+  src: url('/fonts/SouciSansNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpaceCadetNF';
+  src: url('/fonts/SpaceCadetNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpacePatrol';
+  src: url('/fonts/SpacePatrol.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpeedballNo1NF';
+  src: url('/fonts/SpeedballNo1NF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpeedballNo2NF';
+  src: url('/fonts/SpeedballNo2NF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpeedballNo3NF';
+  src: url('/fonts/SpeedballNo3NF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SpondulixNF';
+  src: url('/fonts/SpondulixNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'StandingRoomOnlyNF';
+  src: url('/fonts/StandingRoomOnlyNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'StonyIslandNF';
+  src: url('/fonts/StonyIslandNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'StudebakerNF-Bold';
+  src: url('/fonts/StudebakerNF-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'StudebakerNF';
+  src: url('/fonts/StudebakerNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'StudentCommons';
+  src: url('/fonts/StudentCommons.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TallFilms';
+  src: url('/fonts/TallFilms.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tanach';
+  src: url('/fonts/Tanach.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TanglewoodTalesNF';
+  src: url('/fonts/TanglewoodTalesNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TaraBulbousNF';
+  src: url('/fonts/TaraBulbousNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TeamSpiritNF';
+  src: url('/fonts/TeamSpiritNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Terrazan';
+  src: url('/fonts/Terrazan.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Terribo-Black';
+  src: url('/fonts/Terribo-Black.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TestarossaNF';
+  src: url('/fonts/TestarossaNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Textapoint';
+  src: url('/fonts/Textapoint.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ThamesNudeRoman';
+  src: url('/fonts/ThamesNudeRoman.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TitanickDisplayNF';
+  src: url('/fonts/TitanickDisplayNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TobaccoRoadNF';
+  src: url('/fonts/TobaccoRoadNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TobagoPoster';
+  src: url('/fonts/TobagoPoster.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TobagoPosterAlternate';
+  src: url('/fonts/TobagoPosterAlternate.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TooneyNoodleNF';
+  src: url('/fonts/TooneyNoodleNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Topic-Bold';
+  src: url('/fonts/Topic-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Topic';
+  src: url('/fonts/Topic.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TopicAlternates-Bold';
+  src: url('/fonts/TopicAlternates-Bold.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TopicAlternates';
+  src: url('/fonts/TopicAlternates.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ToylandNF';
+  src: url('/fonts/ToylandNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TradingPostNF';
+  src: url('/fonts/TradingPostNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tribeca';
+  src: url('/fonts/Tribeca.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trocadero';
+  src: url('/fonts/Trocadero.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TroglodyteNF';
+  src: url('/fonts/TroglodyteNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TropicanaNF';
+  src: url('/fonts/TropicanaNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TucsonTwoStepNF';
+  src: url('/fonts/TucsonTwoStepNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UndergroundNF';
+  src: url('/fonts/UndergroundNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Unicorn';
+  src: url('/fonts/Unicorn.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UntidyItalicSkrawl';
+  src: url('/fonts/UntidyItalicSkrawl.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'UppenArmsNF';
+  src: url('/fonts/UppenArmsNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VacationPostcardNF';
+  src: url('/fonts/VacationPostcardNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ValleyGrrrlNF';
+  src: url('/fonts/ValleyGrrrlNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VenturaInline';
+  src: url('/fonts/VenturaInline.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VenturaRegular';
+  src: url('/fonts/VenturaRegular.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VenturaShadow';
+  src: url('/fonts/VenturaShadow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Verve';
+  src: url('/fonts/Verve.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Viking';
+  src: url('/fonts/Viking.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'VinnieBoombahNF';
+  src: url('/fonts/VinnieBoombahNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vivian';
+  src: url('/fonts/Vivian.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Volute';
+  src: url('/fonts/Volute.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WarpDrive';
+  src: url('/fonts/WarpDrive.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WashingtonText';
+  src: url('/fonts/WashingtonText.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Watson';
+  src: url('/fonts/Watson.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Whoosit';
+  src: url('/fonts/Whoosit.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WoodenNickelNF';
+  src: url('/fonts/WoodenNickelNF.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Yorktown';
+  src: url('/fonts/Yorktown.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YurineOverflow';
+  src: url('/fonts/YurineOverflow.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zarpie';
+  src: url('/fonts/Zarpie.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zenda';
+  src: url('/fonts/Zenda.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Zeriba';
+  src: url('/fonts/Zeriba.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'd'Spenser';
+  src: url('/fonts/d'Spenser.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'd'SpenserBlack';
+  src: url('/fonts/d'SpenserBlack.otf') format('opentype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'd'SpenserBold';
+  src: url('/fonts/d'SpenserBold.otf') format('opentype');
+  font-display: swap;
+}
