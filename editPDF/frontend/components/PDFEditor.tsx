@@ -137,7 +137,7 @@ export function PDFEditor() {
     const canUndo = (pageHistories[editPage]?.past?.length || 0) > 0;
     const canRedo = (pageHistories[editPage]?.future?.length || 0) > 0;
 
-    // Keyboard shortcuts for Undo/Redo
+    // Keyboard shortcuts for Undo/Redo and Layer operations
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             // Check if we're in an editable context (input, textarea, contenteditable)
@@ -148,8 +148,53 @@ export function PDFEditor() {
 
             // Only handle if not in an editable element and page is analyzed
             if (!isEditable && analyzedPages[editPage]) {
+                const layers = analyzedPages[editPage]?.layers || [];
+                const selectedLayer = layers.find((l: any) => l.id === selectedLayerId);
+
+                // Helper to update layer(s)
+                const updateLayer = (id: string, updates: any) => {
+                    const updatedLayers = layers.map((l: any) => l.id === id ? { ...l, ...updates } : l);
+                    handleLayersUpdate(updatedLayers);
+                };
+
+                // Ctrl/Cmd + Shift + G = Ungroup
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'g') {
+                    e.preventDefault();
+                    if (selectedLayer) {
+                        const children = layers.filter((l: any) => l.parentId === selectedLayerId);
+                        let newLayers = [...layers];
+                        children.forEach((child: any) => {
+                            newLayers = newLayers.map((l: any) => l.id === child.id ? { ...l, parentId: selectedLayer.parentId || null } : l);
+                        });
+                        handleLayersUpdate(newLayers);
+                    }
+                }
+                // Ctrl/Cmd + G = Group (make next sibling a child)
+                else if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'g') {
+                    e.preventDefault();
+                    if (selectedLayer) {
+                        const siblings = layers.filter((l: any) => l.parentId === selectedLayer.parentId && l.id !== selectedLayerId);
+                        if (siblings.length > 0) {
+                            updateLayer(siblings[0].id, { parentId: selectedLayerId });
+                        }
+                    }
+                }
+                // Ctrl/Cmd + ] = Bring Forward
+                else if ((e.ctrlKey || e.metaKey) && e.key === ']') {
+                    e.preventDefault();
+                    if (selectedLayer) {
+                        updateLayer(selectedLayerId!, { z: (selectedLayer.z || 0) + 1 });
+                    }
+                }
+                // Ctrl/Cmd + [ = Send Backward
+                else if ((e.ctrlKey || e.metaKey) && e.key === '[') {
+                    e.preventDefault();
+                    if (selectedLayer) {
+                        updateLayer(selectedLayerId!, { z: Math.max(0, (selectedLayer.z || 0) - 1) });
+                    }
+                }
                 // Ctrl/Cmd + Shift + Z = Redo
-                if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'z') {
+                else if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === 'z') {
                     e.preventDefault();
                     handleRedo();
                 }
@@ -163,7 +208,7 @@ export function PDFEditor() {
 
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [editPage, analyzedPages, handleUndo, handleRedo]);
+    }, [editPage, analyzedPages, selectedLayerId, handleUndo, handleRedo, handleLayersUpdate]);
 
     const selectedLayer = analyzedPages[editPage]?.layers?.find((l: any) => l.id === selectedLayerId) || null;
 

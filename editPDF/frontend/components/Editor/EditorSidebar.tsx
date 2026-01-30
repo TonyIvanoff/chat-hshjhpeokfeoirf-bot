@@ -4,7 +4,8 @@ import { useState, useRef } from "react";
 import { useDrag, useDrop } from "react-dnd";
 import {
     Bold, Italic, Type, Palette, AlignLeft, AlignCenter, AlignRight, AlignJustify, Underline, Strikethrough,
-    Layers, Image as ImageIcon, Eye, EyeOff, Trash2, MousePointer2, Plus, Table as TableIcon, Square, Highlighter, List, ListOrdered, GripVertical, Check, Superscript, Subscript, Minus, RotateCw
+    Layers, Image as ImageIcon, Eye, EyeOff, Trash2, MousePointer2, Plus, Table as TableIcon, Square, Highlighter, List, ListOrdered, GripVertical, Check, Superscript, Subscript, Minus, RotateCw, ChevronDown, ChevronRight,
+    Group, Ungroup, ArrowUp, ArrowDown, Maximize2, Minimize2
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -134,6 +135,214 @@ function DraggableLayerItem({ layer, index, isSelected, onSelect, onUpdate, onDe
                     <Trash2 className="w-3.5 h-3.5" />
                 </button>
             </div>
+        </div>
+    );
+}
+
+// Draggable Tree Item Component with nesting support
+function DraggableTreeItem({
+    layer,
+    depth,
+    isSelected,
+    onSelect,
+    onUpdate,
+    onDelete,
+    getLayerName,
+    getChildren,
+    getDescendantIds,
+    typeColors,
+    onReparent
+}: any) {
+    const ref = useRef<HTMLDivElement>(null);
+    const children = getChildren(layer.id);
+    const hasChildren = children.length > 0;
+    const isCollapsed = layer.collapsed;
+    const colors = typeColors[layer.type] || { bg: 'bg-slate-50', border: 'border-slate-200', icon: 'bg-slate-100 text-slate-600', text: 'text-slate-700' };
+
+    const Icon = layer.type === 'text' ? Type :
+        layer.type === 'image' ? ImageIcon :
+            layer.type === 'table' ? TableIcon :
+                layer.type === 'placeholder' ? ImageIcon :
+                    layer.type === 'line' ? Minus : Square;
+
+    const [{ isDragging }, drag] = useDrag({
+        type: 'TREE_LAYER_ITEM',
+        item: { id: layer.id, parentId: layer.parentId },
+        collect: (monitor) => ({
+            isDragging: monitor.isDragging(),
+        }),
+    });
+
+    const [{ isOver, canDrop }, drop] = useDrop({
+        accept: 'TREE_LAYER_ITEM',
+        canDrop: (item: any) => {
+            try {
+                // Can't drop on itself
+                if (item.id === layer.id) return false;
+                // Can't drop on own descendants (would create circular reference)
+                const descendants = getDescendantIds(item.id);
+                return !descendants.includes(layer.id);
+            } catch {
+                return false;
+            }
+        },
+        drop: (item: any, monitor) => {
+            if (monitor.didDrop()) return; // Already handled by a child
+            // Reparent: make dragged item a child of this layer
+            onReparent(item.id, layer.id);
+        },
+        collect: (monitor) => ({
+            isOver: monitor.isOver({ shallow: true }),
+            canDrop: monitor.canDrop(),
+        }),
+    });
+
+    drag(drop(ref));
+
+    return (
+        <div className="mb-1.5">
+            <div
+                ref={ref}
+                onClick={() => onSelect(layer.id)}
+                className={cn(
+                    "group flex items-center gap-2 py-2.5 px-3 rounded-lg border transition-all cursor-grab select-none",
+                    isSelected
+                        ? "bg-blue-100 border-blue-300 shadow-md ring-2 ring-blue-200"
+                        : `${colors.bg} ${colors.border} hover:shadow-sm`,
+                    layer.hidden && "opacity-50",
+                    isDragging && "opacity-30",
+                    isOver && canDrop && "ring-2 ring-green-400 bg-green-50"
+                )}
+                style={{ marginLeft: depth * 20 }}
+            >
+                {/* Drag Handle */}
+                <div className="cursor-grab active:cursor-grabbing p-0.5 text-slate-300 hover:text-slate-500 flex-shrink-0">
+                    <GripVertical className="w-3.5 h-3.5" />
+                </div>
+
+                {/* Collapse/Expand button */}
+                <button
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        if (hasChildren) {
+                            onUpdate(layer.id, { collapsed: !isCollapsed });
+                        }
+                    }}
+                    className={cn(
+                        "p-1 rounded transition-colors flex-shrink-0",
+                        hasChildren ? "hover:bg-white/50 text-slate-500" : "invisible"
+                    )}
+                >
+                    {hasChildren && (isCollapsed ? <ChevronRight className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />)}
+                </button>
+
+                {/* Layer icon with type color */}
+                <div className={cn(
+                    "p-1.5 rounded-md flex-shrink-0",
+                    isSelected ? "bg-white text-blue-600 shadow-sm" : colors.icon
+                )}>
+                    <Icon className="w-3.5 h-3.5" />
+                </div>
+
+                {/* Layer name */}
+                <div className="flex-1 min-w-0">
+                    <p className={cn(
+                        "text-sm font-medium truncate",
+                        isSelected ? "text-blue-800" : colors.text
+                    )}>
+                        {layer.name || getLayerName(layer)}
+                    </p>
+                    {hasChildren && (
+                        <p className="text-[9px] text-slate-400 mt-0.5">
+                            {children.length} nested layer{children.length > 1 ? 's' : ''}
+                        </p>
+                    )}
+                </div>
+
+                {/* Actions */}
+                <div className="flex gap-1 flex-shrink-0">
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            const newHidden = !layer.hidden;
+                            onUpdate(layer.id, { hidden: newHidden });
+                            getDescendantIds(layer.id).forEach((id: string) => {
+                                onUpdate(id, { hidden: newHidden });
+                            });
+                        }}
+                        className={cn(
+                            "p-1.5 rounded-md transition-colors",
+                            layer.hidden
+                                ? "bg-orange-100 text-orange-600 hover:bg-orange-200"
+                                : "hover:bg-white/80 text-slate-400 hover:text-slate-600"
+                        )}
+                        title={layer.hidden ? "Show layer" : "Hide layer"}
+                    >
+                        {layer.hidden ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                    </button>
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            getDescendantIds(layer.id).reverse().forEach((id: string) => {
+                                onDelete(id);
+                            });
+                            onDelete(layer.id);
+                        }}
+                        className="p-1.5 hover:bg-red-100 rounded-md text-slate-400 hover:text-red-500 transition-colors"
+                        title="Delete layer"
+                    >
+                        <Trash2 className="w-3.5 h-3.5" />
+                    </button>
+                </div>
+            </div>
+
+            {/* Render children if not collapsed */}
+            {hasChildren && !isCollapsed && (
+                <div className="ml-4 pl-3 border-l-2 border-slate-200 mt-1">
+                    {children.map((child: any) => (
+                        <DraggableTreeItem
+                            key={child.id}
+                            layer={child}
+                            depth={depth + 1}
+                            isSelected={child.id === isSelected}
+                            onSelect={onSelect}
+                            onUpdate={onUpdate}
+                            onDelete={onDelete}
+                            getLayerName={getLayerName}
+                            getChildren={getChildren}
+                            getDescendantIds={getDescendantIds}
+                            typeColors={typeColors}
+                            onReparent={onReparent}
+                        />
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+}
+
+// Drop zone for making layers top-level (remove from parent)
+function DropZoneForRoot({ onDrop }: { onDrop: (id: string) => void }) {
+    const [{ isOver, canDrop }, drop] = useDrop({
+        accept: 'TREE_LAYER_ITEM',
+        drop: (item: any) => {
+            if (item.parentId) { // Only trigger if dragged item has a parent
+                onDrop(item.id);
+            }
+        },
+        canDrop: (item: any) => !!item.parentId, // Only accept nested items
+        collect: (monitor) => ({
+            isOver: monitor.isOver(),
+            canDrop: monitor.canDrop(),
+        }),
+    });
+
+    return (
+        <div ref={drop as any} className={cn(
+            "mb-2 py-2 px-3 rounded-lg border-2 border-dashed text-center text-xs transition-all",
+            isOver && canDrop ? "border-green-400 bg-green-50 text-green-600" : "border-slate-200 text-slate-400"
+        )}>
+            {isOver && canDrop ? "Drop here to move to top level" : "Drag nested layers here to un-nest"}
         </div>
     );
 }
@@ -673,20 +882,279 @@ export function EditorSidebar({
                 )}
 
                 {activeTab === "layers" && (
-                    <div className="p-4 space-y-3">
-                        {[...layers].reverse().map((layer, index) => (
-                            <DraggableLayerItem
-                                key={layer.id}
-                                index={index}
-                                layer={layer}
-                                isSelected={layer.id === selectedLayerId}
-                                onSelect={onLayerSelect}
-                                onUpdate={onLayerUpdate}
-                                onDelete={onLayerDelete}
-                                moveLayer={moveLayer}
-                                getLayerName={getLayerName}
-                            />
-                        ))}
+                    <div className="p-4 space-y-2">
+                        {/* Layer Actions Toolbar */}
+                        <div className="p-2 bg-slate-50 rounded-lg border border-slate-200 mb-3 space-y-2">
+                            {/* Row 1: Group / Ungroup */}
+                            <div className="flex items-center gap-2">
+                                <button
+                                    onClick={() => {
+                                        if (selectedLayerId) {
+                                            const layer = layers.find(l => l.id === selectedLayerId);
+                                            if (layer) {
+                                                const siblings = layers.filter(l => l.parentId === layer.parentId && l.id !== layer.id);
+                                                if (siblings.length > 0) {
+                                                    onLayerUpdate(siblings[0].id, { parentId: selectedLayerId });
+                                                }
+                                            }
+                                        }
+                                    }}
+                                    disabled={!selectedLayerId}
+                                    className={cn(
+                                        "flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-md text-xs font-medium transition-colors",
+                                        selectedLayerId
+                                            ? "bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300"
+                                            : "bg-slate-100 text-slate-400 cursor-not-allowed"
+                                    )}
+                                    title="Group (⌘+G)"
+                                >
+                                    <Group className="w-4 h-4" />
+                                    <span>Group</span>
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        if (selectedLayerId) {
+                                            const layer = layers.find(l => l.id === selectedLayerId);
+                                            if (layer) {
+                                                const children = layers.filter(l => l.parentId === selectedLayerId);
+                                                children.forEach(child => {
+                                                    onLayerUpdate(child.id, { parentId: layer.parentId || null });
+                                                });
+                                            }
+                                        }
+                                    }}
+                                    disabled={!selectedLayerId}
+                                    className={cn(
+                                        "flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-md text-xs font-medium transition-colors",
+                                        selectedLayerId
+                                            ? "bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300"
+                                            : "bg-slate-100 text-slate-400 cursor-not-allowed"
+                                    )}
+                                    title="Ungroup (⌘+⇧+G)"
+                                >
+                                    <Ungroup className="w-4 h-4" />
+                                    <span>Ungroup</span>
+                                </button>
+                            </div>
+                            {/* Row 2: Forward / Back */}
+                            <div className="flex items-center gap-2">
+                                <button
+                                    onClick={() => {
+                                        if (selectedLayerId) {
+                                            const layer = layers.find(l => l.id === selectedLayerId);
+                                            if (layer) {
+                                                onLayerUpdate(selectedLayerId, { z: (layer.z || 0) + 1 });
+                                            }
+                                        }
+                                    }}
+                                    disabled={!selectedLayerId}
+                                    className={cn(
+                                        "flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-md text-xs font-medium transition-colors",
+                                        selectedLayerId
+                                            ? "bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300"
+                                            : "bg-slate-100 text-slate-400 cursor-not-allowed"
+                                    )}
+                                    title="Bring Forward (⌘+])"
+                                >
+                                    <ArrowUp className="w-4 h-4" />
+                                    <span>Forward</span>
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        if (selectedLayerId) {
+                                            const layer = layers.find(l => l.id === selectedLayerId);
+                                            if (layer) {
+                                                onLayerUpdate(selectedLayerId, { z: Math.max(0, (layer.z || 0) - 1) });
+                                            }
+                                        }
+                                    }}
+                                    disabled={!selectedLayerId}
+                                    className={cn(
+                                        "flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-md text-xs font-medium transition-colors",
+                                        selectedLayerId
+                                            ? "bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300"
+                                            : "bg-slate-100 text-slate-400 cursor-not-allowed"
+                                    )}
+                                    title="Send Backward (⌘+[)"
+                                >
+                                    <ArrowDown className="w-4 h-4" />
+                                    <span>Backward</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        {(() => {
+                            // Build tree structure from flat layers with parentId
+                            const rootLayers = layers.filter(l => !l.parentId);
+                            const getChildren = (parentId: string) => layers.filter(l => l.parentId === parentId);
+
+                            // Get all descendant IDs for a layer
+                            const getDescendantIds = (layerId: string): string[] => {
+                                const children = getChildren(layerId);
+                                let ids: string[] = [];
+                                for (const child of children) {
+                                    ids.push(child.id);
+                                    ids = ids.concat(getDescendantIds(child.id));
+                                }
+                                return ids;
+                            };
+
+                            // Type-based colors (light pastel tones)
+                            const typeColors: Record<string, { bg: string; border: string; icon: string; text: string }> = {
+                                text: { bg: 'bg-amber-50', border: 'border-amber-200', icon: 'bg-amber-100 text-amber-600', text: 'text-amber-700' },
+                                image: { bg: 'bg-purple-50', border: 'border-purple-200', icon: 'bg-purple-100 text-purple-600', text: 'text-purple-700' },
+                                placeholder: { bg: 'bg-indigo-50', border: 'border-indigo-200', icon: 'bg-indigo-100 text-indigo-600', text: 'text-indigo-700' },
+                                table: { bg: 'bg-emerald-50', border: 'border-emerald-200', icon: 'bg-emerald-100 text-emerald-600', text: 'text-emerald-700' },
+                                path: { bg: 'bg-rose-50', border: 'border-rose-200', icon: 'bg-rose-100 text-rose-600', text: 'text-rose-700' },
+                                line: { bg: 'bg-cyan-50', border: 'border-cyan-200', icon: 'bg-cyan-100 text-cyan-600', text: 'text-cyan-700' },
+                            };
+
+                            // Recursive tree item renderer
+                            const renderTreeItem = (layer: any, depth: number = 0): React.ReactNode => {
+                                const children = getChildren(layer.id);
+                                const hasChildren = children.length > 0;
+                                const isSelected = layer.id === selectedLayerId;
+                                const isCollapsed = layer.collapsed;
+                                const colors = typeColors[layer.type] || { bg: 'bg-slate-50', border: 'border-slate-200', icon: 'bg-slate-100 text-slate-600', text: 'text-slate-700' };
+
+                                const Icon = layer.type === 'text' ? Type :
+                                    layer.type === 'image' ? ImageIcon :
+                                        layer.type === 'table' ? TableIcon :
+                                            layer.type === 'placeholder' ? ImageIcon :
+                                                layer.type === 'line' ? Minus : Square;
+
+                                return (
+                                    <div key={layer.id} className="mb-1.5">
+                                        <div
+                                            onClick={() => onLayerSelect(layer.id)}
+                                            className={cn(
+                                                "group flex items-center gap-2 py-2.5 px-3 rounded-lg border transition-all cursor-pointer select-none",
+                                                isSelected
+                                                    ? "bg-blue-100 border-blue-300 shadow-md ring-2 ring-blue-200"
+                                                    : `${colors.bg} ${colors.border} hover:shadow-sm`,
+                                                layer.hidden && "opacity-50"
+                                            )}
+                                            style={{ marginLeft: depth * 20 }}
+                                        >
+                                            {/* Collapse/Expand button */}
+                                            <button
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    if (hasChildren) {
+                                                        onLayerUpdate(layer.id, { collapsed: !isCollapsed });
+                                                    }
+                                                }}
+                                                className={cn(
+                                                    "p-1 rounded transition-colors flex-shrink-0",
+                                                    hasChildren ? "hover:bg-white/50 text-slate-500" : "invisible"
+                                                )}
+                                            >
+                                                {hasChildren && (isCollapsed ? <ChevronRight className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />)}
+                                            </button>
+
+                                            {/* Layer icon with type color */}
+                                            <div className={cn(
+                                                "p-1.5 rounded-md flex-shrink-0",
+                                                isSelected ? "bg-white text-blue-600 shadow-sm" : colors.icon
+                                            )}>
+                                                <Icon className="w-3.5 h-3.5" />
+                                            </div>
+
+                                            {/* Layer name */}
+                                            <div className="flex-1 min-w-0">
+                                                <p className={cn(
+                                                    "text-sm font-medium truncate",
+                                                    isSelected ? "text-blue-800" : colors.text
+                                                )}>
+                                                    {layer.name || getLayerName(layer)}
+                                                </p>
+                                                {hasChildren && (
+                                                    <p className="text-[9px] text-slate-400 mt-0.5">
+                                                        {children.length} nested layer{children.length > 1 ? 's' : ''}
+                                                    </p>
+                                                )}
+                                            </div>
+
+                                            {/* Actions - always visible for clarity */}
+                                            <div className="flex gap-1 flex-shrink-0">
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        // Toggle hidden for layer and all descendants
+                                                        const newHidden = !layer.hidden;
+                                                        onLayerUpdate(layer.id, { hidden: newHidden });
+                                                        getDescendantIds(layer.id).forEach(id => {
+                                                            onLayerUpdate(id, { hidden: newHidden });
+                                                        });
+                                                    }}
+                                                    className={cn(
+                                                        "p-1.5 rounded-md transition-colors",
+                                                        layer.hidden
+                                                            ? "bg-orange-100 text-orange-600 hover:bg-orange-200"
+                                                            : "hover:bg-white/80 text-slate-400 hover:text-slate-600"
+                                                    )}
+                                                    title={layer.hidden ? "Show layer" : "Hide layer"}
+                                                >
+                                                    {layer.hidden ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                                                </button>
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        // Delete layer and all descendants
+                                                        getDescendantIds(layer.id).reverse().forEach(id => {
+                                                            onLayerDelete(id);
+                                                        });
+                                                        onLayerDelete(layer.id);
+                                                    }}
+                                                    className="p-1.5 hover:bg-red-100 rounded-md text-slate-400 hover:text-red-500 transition-colors"
+                                                    title="Delete layer"
+                                                >
+                                                    <Trash2 className="w-3.5 h-3.5" />
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        {/* Render children if not collapsed */}
+                                        {hasChildren && !isCollapsed && (
+                                            <div className="ml-4 pl-3 border-l-2 border-slate-200 mt-1">
+                                                {children.map(child => renderTreeItem(child, depth + 1))}
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            };
+
+                            // Handler to reparent a layer (make it child of another or root)
+                            const handleReparent = (draggedId: string, newParentId: string | null) => {
+                                onLayerUpdate(draggedId, { parentId: newParentId });
+                            };
+
+                            return rootLayers.length > 0 ? (
+                                <>
+                                    <DropZoneForRoot onDrop={(id: string) => handleReparent(id, null)} />
+                                    {rootLayers.map(layer => (
+                                        <DraggableTreeItem
+                                            key={layer.id}
+                                            layer={layer}
+                                            depth={0}
+                                            isSelected={selectedLayerId}
+                                            onSelect={onLayerSelect}
+                                            onUpdate={onLayerUpdate}
+                                            onDelete={onLayerDelete}
+                                            getLayerName={getLayerName}
+                                            getChildren={getChildren}
+                                            getDescendantIds={getDescendantIds}
+                                            typeColors={typeColors}
+                                            onReparent={handleReparent}
+                                        />
+                                    ))}
+                                </>
+                            ) : (
+                                <div className="text-center text-slate-400 py-8 text-sm">
+                                    No layers yet
+                                </div>
+                            );
+                        })()}
                     </div>
                 )}
             </div>

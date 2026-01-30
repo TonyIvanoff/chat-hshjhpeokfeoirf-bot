@@ -53,6 +53,9 @@ def extract_pdf_layers(pdf_path: str, page_num: int = 0):
     for i, layer in enumerate(layers):
         if not layer.get("id"):
             layer["id"] = f"layer-{i}"
+    
+    # 4. Build layer hierarchy based on spatial containment
+    layers = _build_layer_hierarchy(layers)
             
     return {
         "width": width,
@@ -448,3 +451,66 @@ def _rgb_to_hex(rgb):
         b = int(rgb[2] * 255)
         return "#{:02x}{:02x}{:02x}".format(r, g, b)
     return "#000000"
+
+
+def _build_layer_hierarchy(layers: list) -> list:
+    """
+    Detect parent-child relationships based on spatial containment.
+    A layer becomes a child of another if it is fully contained within it.
+    """
+    if not layers:
+        return layers
+    
+    # Initialize parentId for all layers
+    for layer in layers:
+        layer['parentId'] = None
+    
+    # Sort by area descending (largest first) - candidates for parents
+    sorted_by_area = sorted(
+        enumerate(layers), 
+        key=lambda x: x[1].get('width', 0) * x[1].get('height', 0), 
+        reverse=True
+    )
+    
+    # For each layer, find its smallest containing parent
+    for i, layer in enumerate(layers):
+        lx = layer.get('x', 0)
+        ly = layer.get('y', 0)
+        lw = layer.get('width', 0)
+        lh = layer.get('height', 0)
+        
+        best_parent_id = None
+        best_parent_area = float('inf')
+        
+        for _, potential_parent in sorted_by_area:
+            # Skip self
+            if potential_parent['id'] == layer['id']:
+                continue
+                
+            px = potential_parent.get('x', 0)
+            py = potential_parent.get('y', 0)
+            pw = potential_parent.get('width', 0)
+            ph = potential_parent.get('height', 0)
+            
+            parent_area = pw * ph
+            layer_area = lw * lh
+            
+            # Skip if potential parent is smaller than layer
+            if parent_area <= layer_area:
+                continue
+            
+            # Check if layer is fully inside potential parent (with 2px tolerance)
+            tolerance = 2
+            if (lx >= px - tolerance and 
+                ly >= py - tolerance and 
+                lx + lw <= px + pw + tolerance and 
+                ly + lh <= py + ph + tolerance):
+                
+                # Found a container, check if it's smaller than current best
+                if parent_area < best_parent_area:
+                    best_parent_area = parent_area
+                    best_parent_id = potential_parent['id']
+        
+        layer['parentId'] = best_parent_id
+    
+    return layers

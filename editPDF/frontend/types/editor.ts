@@ -10,6 +10,11 @@ export interface BaseLayer {
     rotation?: number;
     z?: number;
     hidden?: boolean;
+    // Hierarchy support
+    parentId?: string | null;  // ID of parent layer (null = top-level)
+    collapsed?: boolean;       // UI: collapse children in tree view
+    locked?: boolean;          // Prevent editing
+    name?: string;             // Custom layer name
 }
 
 export interface TextLayerData extends BaseLayer {
